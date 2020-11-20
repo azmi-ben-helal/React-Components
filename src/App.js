@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Photo from './Components/Profile/ProfilePhoto'
+import FullName from './Components/Profile/FullName'
+import Address from './Components/Profile/Address'
+import { Card, Container, Row, Col } from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <Row
+        type="flex"
+        justify="center"
+        align="middle"
+        style={{ minHeight: '100vh' }}
+      >
+        <Card border="info" style={{ width: '18rem' }}>
+          <Photo />
+          <Card.Body>
+            <FullName />
+            <Card.Text>
+              <Address />
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Row>
+    </Container>
+  )
 }
 
-export default App;
+export default App
