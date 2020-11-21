@@ -8,7 +8,7 @@ const Photo = () => (
     alt="Responsive image"
     width="300px"
     height="300px"
-  ></img>
+  />
 )
 
 export default Photo
